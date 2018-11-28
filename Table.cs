@@ -16,6 +16,7 @@ namespace Restaurant
         public tableStatus type;
         public int nrc;
         public int val;
+        Form1 form1;
         public Table()
         {
             InitializeComponent();
@@ -37,7 +38,7 @@ namespace Restaurant
                         button3.Enabled = false;
                         label1.Visible = false;
                         label2.Visible = false;
-                  
+                        
                     }
                     break;
                 case tableStatus.cliented:
@@ -61,6 +62,7 @@ namespace Restaurant
                         label2.Visible = true;
                         label1.Text = nrc.ToString();
                         label2.Text = val.ToString();
+                        
                     }
                     break;
             }
@@ -93,6 +95,9 @@ namespace Restaurant
             val = 0;
             type = tableStatus.standby;
             refresh();
+           // MessageBox.Show(Engine.totalValue.ToString());
+        
+            
         }
     }
    
